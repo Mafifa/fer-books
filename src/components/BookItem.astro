@@ -1,0 +1,20 @@
+---
+interface Props {
+  id: string;
+  title: string;
+  img: string;
+}
+
+const { id, title, img } = Astro.props;
+---
+
+<li>
+  <a href={`/${id}`}>
+    <img
+      class="hover:scale-105 inline-block transition-all hover:contrast-125 hover:shadow-2xl aspect-[389/500] object-cover w-full max-w-full rounded"
+      src={img}
+      alt={`Portada de ${title}`}
+    />
+  </a>
+  <p class="font-sans text-2xl text-center font-semibold">{title}</p>
+</li>

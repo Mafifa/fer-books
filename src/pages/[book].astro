@@ -1,0 +1,44 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { books } from "../books/books";
+import "../assets/Button.css";
+const { book } = Astro.params;
+const info = books.find((b) => b.id === book);
+
+if (!info) {
+  return Astro.redirect("/404");
+}
+---
+
+<Layout title={`Libro ${info.title}`}>
+  <main class="m-auto max-w-4xl pt-20">
+    <div class="grid grid-cols-2 gap-x-1">
+      <div class="flex flex-col items-center">
+        <picture class="mb-8 max-w-64">
+          <img
+            class="w-full relative"
+            src={info.img}
+            alt={`Portada del libro ${info.title}`}
+          />
+        </picture>
+        <div class="flex items-center gap-4">
+          <a class="bn39" href="/"><span class="bn39span">Leer</span></a>
+          <a class="bn39" href="/"><span class="bn39span">Comprar</span></a>
+        </div>
+      </div>
+
+      <aside>
+        <h1 class="text-4xl text-wrap font-semibold p-4">{info.title}</h1>
+        <p class="text-wrap p-2">
+          AQUI IRA LA OPINION DE CADA LIBRO Lorem ipsum dolor, sit amet
+          consectetur adipisicing elit. Dicta ducimus repellendus enim
+          distinctio vero consequuntur magni, assumenda, quisquam commodi,
+          magnam accusamus voluptatem quibusdam ipsa facilis earum quas. Magni,
+          perspiciatis provident?
+        </p>
+        <p><strong> Autor: </strong> debo de colocar el Autor</p>
+        <p><strong>Genero</strong>: Generos</p>
+      </aside>
+    </div>
+  </main>
+</Layout>
