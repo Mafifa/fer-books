@@ -8,13 +8,14 @@ interface Props {
 const { id, title, img } = Astro.props;
 ---
 
-<li>
+<li class="p-2">
   <a href={`/${id}`}>
+    <p class="p-2 font-sans text-lg text-center font-semibold">{title}</p>
     <img
       class="hover:scale-105 inline-block transition-all hover:contrast-125 hover:shadow-2xl aspect-[389/500] object-cover w-full max-w-full rounded"
       src={img}
       alt={`Portada de ${title}`}
+      style=`view-transition-name: book-${id}`
     />
   </a>
-  <p class="font-sans text-2xl text-center font-semibold">{title}</p>
 </li>

@@ -1,43 +1,49 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import { books } from "../books/books";
 import "../assets/Button.css";
+import { books } from "../books/books";
 const { book } = Astro.params;
 const info = books.find((b) => b.id === book);
-
+import Header from "../components/Header.astro";
 if (!info) {
   return Astro.redirect("/404");
 }
 ---
 
 <Layout title={`Libro ${info.title}`}>
-  <main class="m-auto max-w-4xl pt-20">
-    <div class="grid grid-cols-2 gap-x-1">
+  <Header />
+  <main class="max-w-96 m-auto py-12 lg:max-w-5xl">
+    <div class="md:grid md:grid-cols-2 md:gap-x-4">
       <div class="flex flex-col items-center">
         <picture class="mb-8 max-w-64">
           <img
-            class="w-full relative"
+            class="w-full relative rounded object-cover"
             src={info.img}
             alt={`Portada del libro ${info.title}`}
+            style=`view-transition-name: book-${info.id}`
           />
         </picture>
-        <div class="flex items-center gap-4">
+        <div class="flex items-center gap-4 mb-2">
           <a class="bn39" href="/"><span class="bn39span">Leer</span></a>
           <a class="bn39" href="/"><span class="bn39span">Comprar</span></a>
         </div>
       </div>
 
-      <aside>
-        <h1 class="text-4xl text-wrap font-semibold p-4">{info.title}</h1>
-        <p class="text-wrap p-2">
-          AQUI IRA LA OPINION DE CADA LIBRO Lorem ipsum dolor, sit amet
-          consectetur adipisicing elit. Dicta ducimus repellendus enim
-          distinctio vero consequuntur magni, assumenda, quisquam commodi,
-          magnam accusamus voluptatem quibusdam ipsa facilis earum quas. Magni,
-          perspiciatis provident?
+      <aside class="mx-2">
+        <h1 class="text-3xl md:text-6xl text-wrap font-black p-4">
+          {info.title}
+        </h1>
+        <p class="text-lg text-wrap">
+          {`  ${info.opinion}`}
         </p>
-        <p><strong> Autor: </strong> debo de colocar el Autor</p>
-        <p><strong>Genero</strong>: Generos</p>
+        <br />
+        <p class="text-lg text-wrap">
+          {info.opinionP2 ? info.opinionP2 : ""}
+        </p>
+        <br />
+        <p class="text-xl">Autor: <strong>{info.autor} </strong></p>
+        <br />
+        <p><strong>Generos</strong>: Generos</p>
       </aside>
     </div>
   </main>
