@@ -1,42 +1,40 @@
 function checkIsNavigationSupported () {
-  return Boolean(document.startViewTransition)
+  return Boolean(document.startViewTransition);
 }
 
 async function fetchPage (url) {
-  // vamos a cargar la pagia de destino
-  // usamos un fetch para obtener el HTML
-  const response = await fetch(url)
-  const text = await response.text()
-  // quedarnos con el contenido de la etiqueta HTML dentro de la etiqueta body
-  // usamos regex para extraerlo
-  const [, data] = text.match(/<body[^>]*>([\s\S]*)<\/body>/i) ?? ''
-  return data
+  // Cargamos la página de destino usando fetch para obtener el HTML
+  const response = await fetch(url);
+  const text = await response.text();
+  // Extraemos el contenido de la etiqueta HTML dentro de la etiqueta body usando regex
+  const [, data] = text.match(/<body[^>]*>([\s\S]*)<\/body>/i) ?? ['', ''];
+  return data;
 }
 
 export function startViewTransition () {
   if (!checkIsNavigationSupported()) {
-    return // Para que no retorne nada
+    return; // No hace nada si la navegación no es compatible
   }
 
-  window.navigation.addEventListener('navigate', (event) => {
-    const toURL = new URL(event.destination.url)
-    // Es una pagina externa?
+  window.navigation.addEventListener('navigate', async (event) => {
+    const toURL = new URL(event.destination.url);
+    // ¿Es una página externa?
     if (location.origin !== toURL.origin) {
-      return
+      return;
     }
 
-    // Si no es una pagina externa
+    // Si no es una página externa, interceptamos la navegación y cargamos la nueva página
     event.intercept({
       async handler () {
-        const data = await fetchPage(toURL.pathname)
+        const data = await fetchPage(toURL.href);
 
-        // Utilizar la API the view Transition API
+        // Utilizamos la API de View Transition
         document.startViewTransition(() => {
-          // Como tiene que actualizar la vista
-          document.body.innerHTML = data
-          document.documentElement.scrollTop = 0
-        })
+          // Actualizamos la vista con el nuevo contenido
+          document.body.innerHTML = data;
+          document.documentElement.scrollTop = 0; // Volvemos al principio de la página
+        });
       }
-    })
-  })
+    });
+  });
 }

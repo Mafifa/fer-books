@@ -35,7 +35,7 @@ export const books: Book[] = [
   {
     id: 'Camino-de-los-reyes1',
     title: 'El Camino de los Reyes',
-    img: 'public/image/El-camino-de-los-reyes-El-Archivo-de-las-Tormentas-1--i6n21535506.jpg',
+    img: 'https://m.media-amazon.com/images/I/51srLUMCotL.jpg',
     autor: 'Brandon Sanderson',
     opinion: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias libero molestiae veritatis officia rem aliquam! Dolorum quam magni vel ratione, ad ab, necessitatibus possimus aliquid cumque, reiciendis at molestiae recusandae?',
     categories: [categories.Drama, categories.AltaFantasia]
