@@ -1,8 +1,8 @@
-function checkIsNavigationSupported (): boolean {
+function checkIsNavigationSupported () {
   return Boolean(document.startViewTransition)
 }
 
-async function fetchPage (url: string): Promise<string> {
+async function fetchPage (url) {
   // vamos a cargar la pagia de destino
   // usamos un fetch para obtener el HTML
   const response = await fetch(url)
@@ -13,7 +13,7 @@ async function fetchPage (url: string): Promise<string> {
   return data
 }
 
-export function startViewTransition (): void {
+export function startViewTransition () {
   if (!checkIsNavigationSupported()) {
     return // Para que no retorne nada
   }
