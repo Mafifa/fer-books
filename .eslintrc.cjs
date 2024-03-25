@@ -3,7 +3,7 @@ module.exports = {
         "browser": true,
         "es2021": true
     },
-    extends: ["plugin:astro/recommended", "standard-with-typescript"],
+    extends: ["plugin:astro/recommended"],
     overrides: [
         {
             env: {
