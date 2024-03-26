@@ -5,7 +5,7 @@ function checkIsNavigationSupported () {
 async function fetchPage (url) {
   const response = await fetch(url);
   const text = await response.text();
-  const [, data] = text.match(/<body[^>]*>([\s\S]*)<\/body>/i) ?? ['', ''];
+  const data = text.match(/<body[^>]*>([\s\S]*)<\/body>/i)[1]
   return data;
 }
 
