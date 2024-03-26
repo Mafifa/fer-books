@@ -5,12 +5,12 @@ function checkIsNavigationSupported () {
 async function fetchPage (url) {
   const response = await fetch(url);
   const text = await response.text();
-  return text; // Devolver el contenido completo de la página
+  return text;
 }
 
 export function startViewTransition () {
   if (!checkIsNavigationSupported()) {
-    return; // No hace nada si la navegación no es compatible
+    return;
   }
 
   window.navigation.addEventListener('navigate', async (event) => {
@@ -23,18 +23,20 @@ export function startViewTransition () {
       async handler () {
         const data = await fetchPage(toURL.href);
 
-        document.startViewTransition(() => {
-          // Reemplazar solo el contenido del cuerpo
-          const tempDiv = document.createElement('div');
-          tempDiv.innerHTML = data;
-          const newBodyContent = tempDiv.querySelector('body').innerHTML;
-          document.body.innerHTML = newBodyContent;
+        // Inicia la transición
+        document.startViewTransition();
 
-          // También podrías considerar mover otros elementos importantes, como scripts y estilos
-          // Pero asegúrate de manejar adecuadamente cualquier evento asociado a estos elementos
+        // Reemplaza el contenido del cuerpo después de que la transición haya comenzado
+        const tempDiv = document.createElement('div');
+        tempDiv.innerHTML = data;
+        const newBodyContent = tempDiv.querySelector('body').innerHTML;
+        document.body.innerHTML = newBodyContent;
 
-          document.documentElement.scrollTop = 0; // Volvemos al principio de la página
-        });
+        // Finaliza la transición después de actualizar el contenido
+        document.endViewTransition();
+
+        // Ajusta el desplazamiento de la página
+        document.documentElement.scrollTop = 0;
       }
     });
   });
