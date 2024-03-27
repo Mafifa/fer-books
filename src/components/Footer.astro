@@ -1,15 +1,18 @@
 ---
+import TwitterIco from "../../public/image/TwitterIco.astro";
+import GitHubIco from "../../public/image/GitHubIco.astro";
+
 let year = new Date();
 ---
 
 <footer
-  class="rounded-lg flex items-center justify-center shadow p-3 bg-gray-500/60 w-full xl:w-[1120px] mx-auto mb-10"
+  class="rounded-lg flex items-center justify-center shadow bg-gray-500/60 w-full absolute bottom-auto"
 >
   <div
-    class="w-full mx-auto p-2 rounded-lg shadow bg-gray-200/10 max-w-screen-xl flex items-center justify-around"
+    class="w-full mx-auto rounded-lg shadow bg-gray-200/10 max-w-screen-xl flex items-center justify-around py-2"
   >
-    <span class="text-black sm:text-center"
-      >© {year.getUTCFullYear()} Desarrollado por <span class="text-blue-700"
+    <span class="text-black text-center"
+      >{year.getUTCFullYear()} Develop by <span class="text-blue-700"
         >Mafifa</span
       >
     </span>
@@ -28,7 +31,7 @@ let year = new Date();
           md:text-base
           md:px-4"
         >
-          Mafifa Twit-x-ter
+          Mafifa <TwitterIco class="size-6" />
         </a>
       </li>
       <li>
@@ -45,7 +48,7 @@ let year = new Date();
           md:text-base
           md:px-4"
         >
-          Mafifa GitHub
+          Mafifa <GitHubIco class="size-6" />
         </a>
       </li>
     </ul>

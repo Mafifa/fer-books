@@ -5,6 +5,7 @@ import { books } from "../books/books";
 const { book } = Astro.params;
 const info = books.find((b) => b.id === book);
 import Header from "../components/Header.astro";
+import CategoriesPill from "../components/CategoriesPill.astro";
 if (!info) {
   return Astro.redirect("/404");
 }
@@ -41,9 +42,19 @@ if (!info) {
           {info.opinionP2 ? info.opinionP2 : ""}
         </p>
         <br />
-        <p class="text-xl">Autor: <strong>{info.autor} </strong></p>
+        <p class="text-2xl font-bold">
+          Crafteado por: <span class="text-xl font-normal italic"
+            >{info.autor}
+          </span>
+        </p>
         <br />
-        <p><strong>Generos</strong>: Generos</p>
+        <p class="flex items-center my-2">
+          <strong>Generos</strong>: {
+            info.categories.map((category) => (
+              <CategoriesPill name={category.name} color={category.color} />
+            ))
+          }
+        </p>
       </aside>
     </div>
   </main>
