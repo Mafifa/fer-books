@@ -50,8 +50,8 @@ if (!info) {
         <br />
         <p class="flex items-center my-2">
           <strong>Generos</strong>: {
-            info.categories.map((category) => (
-              <CategoriesPill Name={category.Name} color={category.color} />
+            info.categories?.map(({ Name, color }) => (
+              <CategoriesPill Name={Name} color={color} />
             ))
           }
         </p>
