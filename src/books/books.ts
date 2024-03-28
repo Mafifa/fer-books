@@ -1,37 +1,42 @@
-interface Book {
-  id: string
-  title: string
-  img: string
-  autor?: string
-  opinion?: string
-  download?: string
-  buy?: string
-  opinionP2?: string
-  categories?: any
+interface Category {
+  Name: string;
+  color: string;
 }
 
-const categories = {
+interface Book {
+  id: string;
+  title: string;
+  img: string;
+  autor?: string;
+  opinion?: string;
+  download?: string;
+  buy?: string;
+  opinionP2?: string;
+  categories?: Category[];
+}
+
+const categories: Record<string, Category> = {
   CienciaFiccion: { Name: 'Ciencia ficción', color: '#' },
   Autoayuda: { Name: 'Autoayuda', color: 'bg-[#0099ff]' },
   Romance: { Name: 'Romance', color: 'bg-[#b30000] text-white' },
   Fantasia: { Name: 'Fantasía', color: 'bg-[#6600cc] text-white' },
   Drama: { Name: 'Drama', color: 'bg-[#999966]' },
-  Horror: 'Horror',
+  Horror: { Name: 'Horror', color: '#' }, // Se ajusta al formato
   Academia: { Name: 'Academia', color: 'bg-[#99cc00] text-white' },
   Infantil: { Name: 'Infantil', color: 'bg-[#33ccff]' },
   FantasiaOscura: { Name: 'Fantasía oscura', color: 'bg-[#660033] text-white' },
   AltaFantasia: { Name: 'Alta fantasía', color: 'bg-[#6666ff] text-white' },
   FantasiaEpica: { Name: 'Fantasía épica', color: 'bg-[#cc3300]' },
-  FantasiaEspacial: 'Fantasía espacial',
-  Clasicos: 'Clásicos',
-  Japones: 'Japonés',
-  FantasiaMedieval: 'Fantasía medieval',
-  NovelaLigera: 'Novela ligera',
-  FantasiaCoreana: 'Fantasía coreana',
-  VentanaDeEstado: 'Ventana de estado',
-  NovelaWeb: 'Novela web',
-  Ficcion: { Name: 'Ficcion', color: 'bg-[#336600] text-white' }
-}
+  FantasiaEspacial: { Name: 'Fantasía espacial', color: '#' }, // Se ajusta al formato
+  Clasicos: { Name: 'Clásicos', color: '#' }, // Se ajusta al formato
+  Japones: { Name: 'Japonés', color: '#' }, // Se ajusta al formato
+  FantasiaMedieval: { Name: 'Fantasía medieval', color: '#' }, // Se ajusta al formato
+  NovelaLigera: { Name: 'Novela ligera', color: '#' }, // Se ajusta al formato
+  FantasiaCoreana: { Name: 'Fantasía coreana', color: '#' }, // Se ajusta al formato
+  VentanaDeEstado: { Name: 'Ventana de estado', color: '#' }, // Se ajusta al formato
+  NovelaWeb: { Name: 'Novela web', color: '#' }, // Se ajusta al formato
+  Ficcion: { Name: 'Ficcion', color: 'bg-[#336600] text-white' },
+};
 
 export const books: Book[] = [
   {
