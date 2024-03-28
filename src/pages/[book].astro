@@ -34,11 +34,11 @@ if (!info) {
         <h1 class="text-3xl md:text-6xl text-wrap font-black p-4">
           {info.title}
         </h1>
-        <p class="text-lg text-wrap">
+        <p class="text-lg text-justify">
           {`  ${info.opinion}`}
         </p>
         <br />
-        <p class="text-lg text-wrap">
+        <p class="text-lg text-justify">
           {info.opinionP2 ? info.opinionP2 : ""}
         </p>
         <br />
@@ -51,7 +51,7 @@ if (!info) {
         <p class="flex items-center my-2">
           <strong>Generos</strong>: {
             info.categories.map((category) => (
-              <CategoriesPill name={category.name} color={category.color} />
+              <CategoriesPill Name={category.Name} color={category.color} />
             ))
           }
         </p>

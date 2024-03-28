@@ -2,6 +2,7 @@
 import "../assets/Button.css";
 import Footer from "../components/Footer.astro";
 import { ViewTransitions } from "astro:transitions";
+import Marco from "../components/Marco.astro";
 interface Props {
 	title: string;
 }
@@ -10,10 +11,13 @@ const { title } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="es">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
+		<meta
+			name="description"
+			content="Este es un blog de los mejores libros que he leido"
+		/>
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -35,6 +39,10 @@ const { title } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body>
+		<Marco class="absolute size-32 p-1 md:size-72 ml-2 mt-2 md:mt-0" />
+		<Marco
+			class="absolute right-0 size-32 p-1 md:size-72 ml-2 mt-2 md:mt-0 rotate-90"
+		/>
 		<div id="content">
 			<slot />
 		</div>

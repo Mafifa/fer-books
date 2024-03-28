@@ -1,14 +1,14 @@
 ---
 interface Props {
-  name: string;
+  Name: string;
   color: string;
 }
 
-const { name, color } = Astro.props;
+const { Name, color } = Astro.props;
 ---
 
 <span class={`flex mx-1 rounded-full py-1 border border-white/10 px-1 ${color}`}
   ><span class="px-2 py-2 border border-solid border-white rounded-full">
-    {name}
+    {Name}
   </span>
 </span>
