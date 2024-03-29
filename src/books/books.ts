@@ -98,6 +98,46 @@ export const books: Book[] = [
     opinion: '"Nuncanoche" es el primer libro de la trilogía "Crónicas de la Nuncanoche" escrita por Jay Kristoff. Esta historia nos sumerge en un mundo de fantasía oscura en donde seguimos la vida de Mia Corvere, una joven aprendiz de asesina que se embarca en la misión de unirse al credo de asesinos mas poderoso del imperio, la iglesia del bendito asesinato.',
     opinionP2: ' La narrativa de Jay Kristoff es cautivadora y llena de acción.El autor crea un mundo original y detallado, donde la magia y la intriga se entrelazan en cada página.Además, la trama está llena de giros sorprendentes y momentos emocionantes que mantienen al lector enganchado de principio a fin. "Nuncanoche" es una novela que combina elementos de fantasía oscura, aventura y acción.Donde Jay Kristoff logra equilibrar hábilmente la oscuridad y la violencia con momentos de humor y camaradería entre los personajes.Además, el libro aborda temas como el poder, la venganza y la redención, en un mundo en donde no sabes cuales son los peligrosos que acechan.',
     categories: [categories.FantasiaOscura, categories.Academia]
+  },
+  {
+    id: 'asesino-brujas',
+    img: 'hoa',
+    title: 'Asesino de brujas',
+    autor: 'Shelby Mahurin',
+    opinion: '"La bruja blanca" es el primer libro de la trilogía del "Asesino de brujas" escrita por Shelby Mahurin. El libro sigue la historia de Lou, una joven ladrona con habilidades mágicas, y Reid, un cazador de brujas dedicado a erradicar la magia.  Debido a circunstancias más allá de su control ambos se ven obligados a hacer algo que esta en contra de todo en lo que creen, contraer matrimonio.',
+    opinionP2: 'La trama está llena de giros inesperados, intriga y tensión. La autora crea un mundo rico y detallado, donde la magia y la brujería desempeñan un papel fundamental. Los personajes están bien desarrollados y resultan muy interesantes, con sus propias motivaciones y secretos. La relación entre Lou y Reid es uno de los aspectos más destacados del libro. Su romance se desarrolla de manera gradual y creíble, con momentos de tensión y pasión. Además, la química entre los dos protagonistas es palpable y te mantendrá enganchado a lo largo de la historia.',
+  },
+  {
+    id: 'primeras-quince-vidas',
+    title: 'Las primeras quince vidas de Harry august',
+    img: 'hola',
+    autor: 'Catherine Webb',
+    opinion: '"Las primeras quince vidas de Harry August" es una novela escrita por Catherine Webb, también conocida por su seudónimo Claire North. La historia a modo de carta nos cuenta la vida de Harry August, un niño bastardo nacido de un noble inglés y su sirvienta, quien vive una vida tranquila hasta que al morir de vejez se da cuenta de una verdad que lo lleva a la locura, posee la capacidad de nacer una y otra vez en el mismo año de su primera vida, con todos los recuerdos y conocimientos de sus vidas anteriores. A lo largo de la historia, seguimos a Harry mientras explora las implicaciones de su existencia única. Con cada vida, Harry acumula sabiduría y experiencia, lo que le permite influir en los eventos históricos y participar en una sociedad secreta llamada el club cronos, una sociedad secreta compuestas por personas como él.',
+    opinionP2: '"Las primeras quince vidas de Harry August" es una novela que combina elementos de ciencia ficción, fantasía y thriller. Con una trama intrigante y llena de giros sorprendentes, el libro te mantendrá enganchado desde la primera página hasta la última.',
+  },
+  {
+    id: 'Amanecer-rojo',
+    img: 'A',
+    title: 'Amanecer rojo',
+    autor: 'Pierce Brown',
+    opinion: '"Amanecer rojo" es el primer libro de la saga con el mismo nombre escrita por Pierce Brown. Esta novela nos transporta a un futuro distópico en el que la sociedad está dividida en castas basadas en colores. El protagonista, Darrow, es un Rojo, la casta más baja y oprimida, quienes viven como eslavos mineros en las minas de marte, en donde creen que son los elegidos para ser la primera generación en colonizar el espacio, la vida de Darrow marcha con normalidad según los estándares escogidos para el hasta que descubre la verdad detrás del mundo en el que vive. En este mundo de intrigas políticas y batallas sangrientas, Darrow luchara por la justicia y la libertad de su pueblo.',
+    opinionP2: 'El libro está lleno de acción, con emocionantes batallas, traiciones y giros inesperados. Pierce Brown crea un universo rico y complejo, con personajes bien desarrollados y una trama que te mantendrá enganchado desde el principio hasta el final.'
+  },
+  {
+    id: 'Hail-Mary',
+    img: 'ola',
+    title: 'Proyecto Hail Mary',
+    autor: 'Andy weir',
+    opinion: 'Del galardonado autor Andy Weir, "Proyecto Hail Mary" es una emocionante novela de ciencia ficción escrita del aclamado autor de "El Marciano".En esta historia, Weir nos transporta a un futuro cercano en el que la humanidad se enfrenta a una amenaza cósmica que podría llevar a la extinción de la especie.',
+    opinionP2: 'El protagonista de la historia es Ryland Grace, un científico que se despierta en una nave espacial sin recordar quién es ni cómo llegó allí. Pronto descubre que su misión es salvar a la Tierra de una extraña forma de vida alienígena que está consumiendo la energía del Sol. A medida que Grace investiga y desentraña los misterios de su situación, se enfrenta a desafíos científicos y morales que pondrán a prueba su ingenio y determinación. Con un estilo narrativo cautivador y lleno de detalles científicos, Andy Weir logra sumergir al lector en un viaje fascinante a través del espacio y el tiempo.'
+  },
+  {
+    id: 'tre-cuerpos',
+    img: 'tres cuerpos',
+    title: 'El problema de los 3 cuerpos',
+    opinion: '“El problema de los tres cuerpos” es el primer libro de la trilogía llamada “El recuerdo del pasado de la tierra” escrita por el autor chino Liu Cixin.  La historia comienza durante la Revolución Cultural china, cuando un proyecto militar secreto se encuentra con una señal extraterrestre proveniente del espacio. Muchos años después científicos de todo el mundo empiezan a quitarse la vida sin razón aparente, la única evidencia es una nota dejada por ellos “la física nunca ha existido y nunca existirá”'
   }
+
+
 
 ]
