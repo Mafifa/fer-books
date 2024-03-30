@@ -38,10 +38,12 @@ const { title } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body>
-		<Marco class="absolute size-32 p-1 md:size-72 ml-2 mt-2 md:mt-0" />
+	<body class="dark:bg-[#1c1d22]">
 		<Marco
-			class="absolute right-0 size-32 p-1 md:size-72 ml-2 mt-2 md:mt-0 rotate-90"
+			class="absolute size-32 p-1 md:size-72 ml-2 mt-2 md:mt-0 dark:fill-white"
+		/>
+		<Marco
+			class="absolute right-0 size-32 p-1 md:size-72 ml-2 mt-2 md:mt-0 rotate-90 dark:fill-white"
 		/>
 		<div id="content">
 			<slot />
@@ -74,7 +76,6 @@ const { title } = Astro.props;
 					sans-serif;
 				font-weight: 500;
 				font-style: normal;
-				background-size: 224px;
 			}
 			code {
 				font-family:
@@ -86,11 +87,6 @@ const { title } = Astro.props;
 					Bitstream Vera Sans Mono,
 					Courier New,
 					monospace;
-			}
-			.rubik-wet paint-regular {
-				font-family: "Rubik Wet Paint", system-ui;
-				font-weight: 400;
-				font-style: normal;
 			}
 			.finger-paint-regular {
 				font-family: "Finger Paint", sans-serif;

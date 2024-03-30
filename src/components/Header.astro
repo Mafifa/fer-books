@@ -3,7 +3,7 @@ import ThemeIco from "./ThemeIco.astro";
 ---
 
 <header
-  class="flex justify-center items-center lg:max-w-screen-lg md:mx-auto mx-3 ml-9"
+  class="dark:text-white flex justify-center items-center lg:max-w-screen-lg md:mx-auto mx-3 ml-9"
 >
   <nav
     class="flex flex-row justify-around items-center gap-x-10 opacity-90 text-xs md:text-base lg:text-lg"
@@ -27,6 +27,6 @@ import ThemeIco from "./ThemeIco.astro";
       rel="nooperner noreferrer"
       href="https://twitter.com/Fe_Guarache">Twitter</a
     >
-    <ThemeIco />
+    <ThemeIco client:visible />
   </nav>
 </header>

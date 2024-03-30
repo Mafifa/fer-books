@@ -17,12 +17,14 @@ if (!info) {
 
 <Layout title={`Libro ${info.title}`}>
   <Header />
-  <main class="max-w-96 m-auto py-12 lg:max-w-5xl">
+  <main class="dark:text-white max-w-96 m-auto py-12 lg:max-w-5xl">
     <div class="md:grid md:grid-cols-2 md:gap-x-4">
       <div class="flex flex-col items-center">
-        <picture class="mb-8 max-w-64">
+        <picture
+          class="mb-8 aspect-[325/500] object-cover w-full max-w-64 rounded"
+        >
           <img
-            class="w-full relative rounded object-cover"
+            class="w-full max-w-64 relative rounded object-cover aspect-[325/500]"
             src={info.img}
             alt={`Portada del libro ${info.title}`}
             style=`view-transition-name: book-${info.id}`
