@@ -15,19 +15,23 @@ interface Book {
   categories?: Category[];
 }
 
-const categories: Record<string, Category> = {
-  CienciaFiccion: { Name: 'Ciencia ficción', color: '#' },
+const categories = {
+  ViajesTiempo: {
+    Name: 'Viajes en el tiempo',
+    color: 'bg-[#232221] text-white'
+  },
+  CienciaFiccion: { Name: 'Ciencia ficción', color: 'bg-[#235437] text-white' },
   Autoayuda: { Name: 'Autoayuda', color: 'bg-[#0099ff]' },
   Romance: { Name: 'Romance', color: 'bg-[#b30000] text-white' },
   Fantasia: { Name: 'Fantasía', color: 'bg-[#6600cc] text-white' },
-  Drama: { Name: 'Drama', color: 'bg-[#999966]' },
+  Drama: { Name: 'Drama', color: 'bg-[#543f23] text-white' },
   Horror: { Name: 'Horror', color: '#' }, // Se ajusta al formato
   Academia: { Name: 'Academia', color: 'bg-[#99cc00] text-white' },
   Infantil: { Name: 'Infantil', color: 'bg-[#33ccff]' },
   FantasiaOscura: { Name: 'Fantasía oscura', color: 'bg-[#660033] text-white' },
   AltaFantasia: { Name: 'Alta fantasía', color: 'bg-[#6666ff] text-white' },
   FantasiaEpica: { Name: 'Fantasía épica', color: 'bg-[#cc3300]' },
-  FantasiaEspacial: { Name: 'Fantasía espacial', color: '#' }, // Se ajusta al formato
+  FantasiaEspacial: { Name: 'Fantasía espacial', color: 'bg-[#232f54] text-white' }, // Se ajusta al formato
   Clasicos: { Name: 'Clásicos', color: '#' }, // Se ajusta al formato
   Japones: { Name: 'Japonés', color: '#' }, // Se ajusta al formato
   FantasiaMedieval: { Name: 'Fantasía medieval', color: '#' }, // Se ajusta al formato
@@ -36,6 +40,7 @@ const categories: Record<string, Category> = {
   VentanaDeEstado: { Name: 'Ventana de estado', color: '#' }, // Se ajusta al formato
   NovelaWeb: { Name: 'Novela web', color: '#' }, // Se ajusta al formato
   Ficcion: { Name: 'Ficcion', color: 'bg-[#336600] text-white' },
+  PostApocaliptico: { Name: 'Post-Apocaliptico', color: 'bg-[#542323] text-white' }
 };
 
 export const books: Book[] = [
@@ -44,7 +49,8 @@ export const books: Book[] = [
     title: 'El Camino de los Reyes',
     img: 'https://m.media-amazon.com/images/I/51srLUMCotL.jpg',
     autor: 'Brandon Sanderson',
-    opinion: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias libero molestiae veritatis officia rem aliquam! Dolorum quam magni vel ratione, ad ab, necessitatibus possimus aliquid cumque, reiciendis at molestiae recusandae?',
+    opinionP2: '"El Camino de los Reyes" es la obra más importante de su autor, siendo elogiada por su mundo imaginativo, su trama intrigante y sus personajes bien desarrollados. Muchos consideran que es una obra maestra de la fantasía épica. ',
+    opinion: 'El Camino de los Reyes" es la obra magna y el primer libro de la decalogía “El Archivo de las Tormentas" del autor estadounidense Brandon Sanderson. La historia se desarrolla en el mundo de Roshar, un planeta constantemente azotado por poderosas tormentas que han moldeado la fauna y la flora del mismo, luego del asesinato del rey de alezkar a manos de un misterioso asesino de blanco, los tres protagonistas kaladin, shallan y dalinar se verán envueltos en una trama épica llena de intriga, política, magia y batallas.',
     categories: [categories.Drama, categories.AltaFantasia]
 
   },
@@ -60,7 +66,7 @@ export const books: Book[] = [
   {
     id: 'aprendiz-de-bruja',
     title: 'Nicky aprendiz de bruja',
-    img: 'https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/media/image/2020/02/nicky-aprendiz-bruja-portada-1858271.jpg?tf=3840x',
+    img: 'https://books.google.co.ve/books/publisher/content?id=t1eeEAAAQBAJ&pg=PP1&img=1&zoom=3&hl=en&bul=1&sig=ACfU3U2JfD6OR4hHxGboGRzpX1l7czuytw&w=1280',
     autor: 'Eiko Kadono',
     opinion: 'La obra original de la famosa adaptación de estudio ghibli y Hayao Miyazaki. "Nicky aprendiz de bruja" es una encantadora novela escrita por Eiko Kadono, cuya historia nos lleva a el mundo de Nicky, una joven bruja que, al cumplir los 13 años y como dicta la tradición de las brujas adolescentes, debe emprender una misión. Pasar un año fuera de casa para aprender a valerse por sí misma. A lo largo del viaje, acompañamos a Nicky y su gato Jiji en sus aventuras por establecerse y vivir por su cuenta en una nueva ciudad, combinando elementos de fantasía y comedia, creando una historia divertida y conmovedora. Es un libro perfecto para aquellos que disfrutan de las historias mágicas y de los personajes carismáticos.',
     categories: [categories.Fantasia, categories.Infantil]
@@ -101,41 +107,48 @@ export const books: Book[] = [
   },
   {
     id: 'asesino-brujas',
-    img: 'hoa',
+    img: 'https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSQv0PTdIWtlkQ2yzvhsPc2hiQCmppGeW5e8yxDhrx5KiMfPC6e',
     title: 'Asesino de brujas',
     autor: 'Shelby Mahurin',
     opinion: '"La bruja blanca" es el primer libro de la trilogía del "Asesino de brujas" escrita por Shelby Mahurin. El libro sigue la historia de Lou, una joven ladrona con habilidades mágicas, y Reid, un cazador de brujas dedicado a erradicar la magia.  Debido a circunstancias más allá de su control ambos se ven obligados a hacer algo que esta en contra de todo en lo que creen, contraer matrimonio.',
     opinionP2: 'La trama está llena de giros inesperados, intriga y tensión. La autora crea un mundo rico y detallado, donde la magia y la brujería desempeñan un papel fundamental. Los personajes están bien desarrollados y resultan muy interesantes, con sus propias motivaciones y secretos. La relación entre Lou y Reid es uno de los aspectos más destacados del libro. Su romance se desarrolla de manera gradual y creíble, con momentos de tensión y pasión. Además, la química entre los dos protagonistas es palpable y te mantendrá enganchado a lo largo de la historia.',
+    categories: [categories.Fantasia, categories.Romance]
   },
   {
     id: 'primeras-quince-vidas',
     title: 'Las primeras quince vidas de Harry august',
-    img: 'hola',
+    img: 'https://m.media-amazon.com/images/I/71yBTiP50JL._AC_UF1000,1000_QL80_.jpg',
     autor: 'Catherine Webb',
     opinion: '"Las primeras quince vidas de Harry August" es una novela escrita por Catherine Webb, también conocida por su seudónimo Claire North. La historia a modo de carta nos cuenta la vida de Harry August, un niño bastardo nacido de un noble inglés y su sirvienta, quien vive una vida tranquila hasta que al morir de vejez se da cuenta de una verdad que lo lleva a la locura, posee la capacidad de nacer una y otra vez en el mismo año de su primera vida, con todos los recuerdos y conocimientos de sus vidas anteriores. A lo largo de la historia, seguimos a Harry mientras explora las implicaciones de su existencia única. Con cada vida, Harry acumula sabiduría y experiencia, lo que le permite influir en los eventos históricos y participar en una sociedad secreta llamada el club cronos, una sociedad secreta compuestas por personas como él.',
     opinionP2: '"Las primeras quince vidas de Harry August" es una novela que combina elementos de ciencia ficción, fantasía y thriller. Con una trama intrigante y llena de giros sorprendentes, el libro te mantendrá enganchado desde la primera página hasta la última.',
+    categories: [categories.CienciaFiccion, categories.ViajesTiempo]
   },
   {
     id: 'Amanecer-rojo',
-    img: 'A',
+    img: 'https://m.media-amazon.com/images/I/51nd23JkBiL._SY445_SX342_.jpg',
     title: 'Amanecer rojo',
     autor: 'Pierce Brown',
     opinion: '"Amanecer rojo" es el primer libro de la saga con el mismo nombre escrita por Pierce Brown. Esta novela nos transporta a un futuro distópico en el que la sociedad está dividida en castas basadas en colores. El protagonista, Darrow, es un Rojo, la casta más baja y oprimida, quienes viven como eslavos mineros en las minas de marte, en donde creen que son los elegidos para ser la primera generación en colonizar el espacio, la vida de Darrow marcha con normalidad según los estándares escogidos para el hasta que descubre la verdad detrás del mundo en el que vive. En este mundo de intrigas políticas y batallas sangrientas, Darrow luchara por la justicia y la libertad de su pueblo.',
+    categories: [categories.CienciaFiccion, categories.FantasiaEspacial],
     opinionP2: 'El libro está lleno de acción, con emocionantes batallas, traiciones y giros inesperados. Pierce Brown crea un universo rico y complejo, con personajes bien desarrollados y una trama que te mantendrá enganchado desde el principio hasta el final.'
   },
   {
     id: 'Hail-Mary',
-    img: 'ola',
+    img: 'https://imagessl6.casadellibro.com/a/l/s5/16/9788418037016.webp',
     title: 'Proyecto Hail Mary',
+    categories: [categories.CienciaFiccion, categories.PostApocaliptico],
     autor: 'Andy weir',
     opinion: 'Del galardonado autor Andy Weir, "Proyecto Hail Mary" es una emocionante novela de ciencia ficción escrita del aclamado autor de "El Marciano".En esta historia, Weir nos transporta a un futuro cercano en el que la humanidad se enfrenta a una amenaza cósmica que podría llevar a la extinción de la especie.',
     opinionP2: 'El protagonista de la historia es Ryland Grace, un científico que se despierta en una nave espacial sin recordar quién es ni cómo llegó allí. Pronto descubre que su misión es salvar a la Tierra de una extraña forma de vida alienígena que está consumiendo la energía del Sol. A medida que Grace investiga y desentraña los misterios de su situación, se enfrenta a desafíos científicos y morales que pondrán a prueba su ingenio y determinación. Con un estilo narrativo cautivador y lleno de detalles científicos, Andy Weir logra sumergir al lector en un viaje fascinante a través del espacio y el tiempo.'
   },
   {
     id: 'tre-cuerpos',
-    img: 'tres cuerpos',
+    img: 'https://m.media-amazon.com/images/I/81tWAdsfqKL._SY385_.jpg',
     title: 'El problema de los 3 cuerpos',
-    opinion: '“El problema de los tres cuerpos” es el primer libro de la trilogía llamada “El recuerdo del pasado de la tierra” escrita por el autor chino Liu Cixin.  La historia comienza durante la Revolución Cultural china, cuando un proyecto militar secreto se encuentra con una señal extraterrestre proveniente del espacio. Muchos años después científicos de todo el mundo empiezan a quitarse la vida sin razón aparente, la única evidencia es una nota dejada por ellos “la física nunca ha existido y nunca existirá”'
+    categories: [categories.CienciaFiccion, categories.Drama],
+    opinion: '“El problema de los tres cuerpos” es el primer libro de la trilogía llamada “El recuerdo del pasado de la tierra” escrita por el autor chino Liu Cixin.  La historia comienza durante la Revolución Cultural china, cuando un proyecto militar secreto se encuentra con una señal extraterrestre proveniente del espacio. Muchos años después científicos de todo el mundo empiezan a quitarse la vida sin razón aparente, la única evidencia es una nota dejada por ellos “la física nunca ha existido y nunca existirá”',
+    opinionP2: '“El problema de los tres cuerpos" es una novela que rebosa originalidad, su capacidad para combinar elementos científicos con una trama intrigante. explora conceptos complejos de manera accesible y cautivadora.'
+
   }
 
 
