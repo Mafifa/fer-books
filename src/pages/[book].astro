@@ -8,7 +8,6 @@ import "../assets/Button.css";
 import { books } from "../books/books";
 const { book } = Astro.params;
 const info = books.find((b) => b.id === book);
-import Header from "../components/Header.astro";
 import CategoriesPill from "../components/CategoriesPill.astro";
 if (!info) {
   return Astro.redirect("/404");
