@@ -3,6 +3,8 @@ import "../assets/Button.css";
 import Footer from "../components/Footer.astro";
 import { ViewTransitions } from "astro:transitions";
 import Marco from "../components/Marco.astro";
+import Header from "../components/Header.astro";
+
 interface Props {
 	title: string;
 }
@@ -45,6 +47,7 @@ const { title } = Astro.props;
 		<Marco
 			class="absolute right-0 size-32 p-1 md:size-72 ml-2 mt-2 md:mt-0 rotate-90 dark:fill-white"
 		/>
+		<Header />
 		<div id="content">
 			<slot />
 		</div>
