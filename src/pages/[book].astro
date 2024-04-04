@@ -4,11 +4,13 @@ interface Category {
   color?: string;
 }
 import Layout from "../layouts/Layout.astro";
+import "../assets/Card.css";
 import "../assets/Button.css";
 import { books } from "../books/books";
 const { book } = Astro.params;
 const info = books.find((b) => b.id === book);
 import CategoriesPill from "../components/CategoriesPill.astro";
+import BuyButton from "../components/BuyButton.astro";
 if (!info) {
   return Astro.redirect("/404");
 }
@@ -29,8 +31,7 @@ if (!info) {
           />
         </picture>
         <div class="flex items-center gap-4 mb-2">
-          <a class="bn39" href="/"><span class="bn39span">Leer</span></a>
-          <a class="bn39" href="/"><span class="bn39span">Comprar</span></a>
+          <BuyButton URL={info.buy} />
         </div>
       </div>
 
