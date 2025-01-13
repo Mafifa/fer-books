@@ -5,7 +5,7 @@
 ![Version](https://img.shields.io/badge/version-0.0.1-blue.svg)
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
 
-A dynamic web application showcasing @Fe_Guarache's top book reviews with seamless navigation.
+A dynamic web application showcasing [@Fe_Guarache](https://x.com/Fe_Guarache)'s top book reviews with seamless navigation.
 
 </div>
 
