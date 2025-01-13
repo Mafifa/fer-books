@@ -93,9 +93,7 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ## 📬 Contact
 
-@Fe_Guarache - Follow on Twitter for the latest book reviews and updates.
-
-Project Link: [https://github.com/your-username/maff-books](https://github.com/your-username/maff-books)
+[@Fe_Guarache](https://x.com/Fe_Guarache) - Follow on Twitter for the latest book reviews and updates.
 
 ---
 
